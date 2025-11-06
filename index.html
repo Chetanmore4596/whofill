@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Room Water Fill — Quick Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <h1>Room Water Fill</h1>
+      <div class="mascot" aria-hidden="true" title="Happy Water Bottle">
+        <!-- Cute smiling water bottle - inline SVG -->
+        <svg width="140" height="160" viewBox="0 0 140 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="water-grad" x1="40" y1="90" x2="102" y2="140" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#66FCF1"/>
+              <stop offset="60%" stop-color="#45A29E"/>
+              <stop offset="100%" stop-color="#148f86"/>
+            </linearGradient>
+          </defs>
+          <!-- bottle shadow -->
+          <ellipse cx="70" cy="148" rx="38" ry="8" class="m-shadow"/>
+          <!-- bottle body -->
+          <rect x="38" y="30" width="64" height="100" rx="18" class="m-body"/>
+          <!-- water level -->
+          <path d="M42 92 C55 86 85 100 100 92 V130 C100 140 92 148 82 148 H58 C48 148 42 140 42 130 V92 Z" class="m-water" fill="url(#water-grad)"/>
+          <!-- bubbles -->
+          <circle cx="60" cy="112" r="2.2" class="m-bubble"/>
+          <circle cx="75" cy="120" r="1.8" class="m-bubble"/>
+          <circle cx="88" cy="108" r="1.6" class="m-bubble"/>
+          <!-- label stripe -->
+          <rect x="38" y="64" width="64" height="14" rx="7" class="m-stripe"/>
+          <!-- cap -->
+          <rect x="52" y="18" width="36" height="16" rx="5" class="m-cap"/>
+          <rect x="50" y="14" width="40" height="8" rx="4" class="m-cap-top"/>
+          <!-- face -->
+          <circle cx="58" cy="83" r="3" class="m-eye"/>
+          <circle cx="82" cy="83" r="3" class="m-eye"/>
+          <path d="M60 92 C66 100 74 100 80 92" class="m-smile"/>
+          <!-- sparkle -->
+          <path d="M102 50 l4 -8 l4 8 l8 4 l-8 4 l-4 8 l-4 -8 l-8 -4 z" class="m-sparkle"/>
+        </svg>
+      </div>
+    </header>
+
+    <main id="main" autocomplete="off">
+      <section id="login-section" class="card center-card">
+        <h2>Login</h2>
+        <form id="login-form" autocomplete="off">
+          <label>Email
+            <input id="email" type="email" autocomplete="off" required placeholder="eg. name@301.com" />
+          </label>
+          <label>Password
+            <input id="password" type="password" autocomplete="off" required placeholder="eg. name301" />
+          </label>
+          <button class="btn" type="submit">Login</button>
+        </form>
+
+        </div>
+      </section>
+
+      <section id="board-section" class="hidden">
+        <div class="topbar">
+          <div class="user-badge" id="user-badge"></div>
+          <button id="logout" class="btn ghost">Logout</button>
+        </div>
+
+        <div class="grid">
+          <div class="column card calendar-card">
+            <h3>Calendar (This month)</h3>
+            <div id="calendar"></div>
+          </div>
+
+          <div class="column card status-card narrow">
+            <h3>Today's Status</h3>
+            <div id="selector"></div>
+            <div id="status-list" class="status-list"></div>
+            <div class="action-area" id="action-area">
+              <button id="fill-btn" class="btn big">Mark Filled ✅</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+<div id="confetti" class="confetti"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
